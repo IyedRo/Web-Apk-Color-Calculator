@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>Colors And Code IYR</title>
+    <style>
+        body {
+            background-color: GhostWhite;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+            background-color: rgba(45, 150, 45);
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            transition: 0.2s;
+            box-shadow: 0 0 5px rgba(45, 150, 45);
+            height: 55px;
+        }
+
+        .header h2 {
+            font-size: 22px;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+        }
+
+        .header .menu {
+            display: flex;
+            margin-left: auto;
+        }
+
+        .header a {
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            text-decoration: none;
+            padding: 3px;
+            margin-right: 15px;
+            transition: 0.2s;
+        }
+
+        .header a:hover {
+            box-shadow: 0 0 3px rgba(0, 0, 0);
+            border-radius: 5px;
+            color: rgb(0, 10, 200);
+            text-decoration: underline;
+        }
+
+
+
+        .a1,
+        .a2 {
+            position: relative;
+            top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+            padding: 3px;
+            transition: 0.2s;
+        }
+
+        .a1:hover,
+        .a2:hover {
+            box-shadow: 0 0 3px black;
+            border-radius: 5px;
+            color: rgb(0, 10, 200);
+            text-decoration: underline;
+        }
+
+        .heading {
+            display: grid;
+            place-items: center;
+            width: 60%;
+            margin: 20px auto;
+            color: black;
+            background-color: silver;
+            box-shadow: 0 0 1px silver;
+            border-radius: 15px;
+            padding: 15px;
+            font-size: 30px;
+            font-weight: bold;
+            text-transform: capitalize;
+        }
+
+        #color-display {
+            font-size: 20px;
+            border-radius: 5px;
+            border: 2px double black;
+            background-color: LightGray;
+            padding: 7px;
+            box-shadow: 0 0 1px LightGray;
+        }
+
+        #color-display:hover {
+            color: rgba(45, 150, 45);
+            box-shadow: 0 0 3px black;
+        }
+
+        .Allcontent {
+            margin: 20px auto;
+            width: 85%;
+            padding: 25px;
+            border-radius: 15px;
+            background-color: silver;
+            box-shadow: 0 0 1px silver;
+        }
+
+        .color-row {
+            display: ruby-text;
+            margin: 0;
+        }
+
+        .circle-name {
+            background-color: lightgray;
+            box-shadow: 0 0 1px lightgray;
+            border-radius: 10px;
+            margin: 2px;
+        }
+
+        .color-circle {
+            width: 75px;
+            height: 75px;
+            border-radius: 50%;
+            margin: 22px 22px 0 22px;
+            transition: 0.2s;
+        }
+
+        .color-circle:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 3px black;
+        }
+
+        .color-circle-name {
+            font-size: 14px;
+            display: grid;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .color-circle-name h1 {
+            color: #000000;
+            margin-top: 10px;
+            border-radius: 5px;
+            padding: 3px;
+        }
+
+        .color-circle-name h1:hover {
+            border-radius: 5px;
+            box-shadow: 0 0 3px black;
+            color: rgba(45, 150, 45);
+        }
+
+        .hr1 {
+            border: 1px solid black;
+            box-shadow: 0 0 1px black;
+        }
+
+        .hr2 {
+            border: 1px solid black;
+            box-shadow: 0 0 1px black;
+        }
+
+
+
+        .color-picker {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+        }
+
+        .color-picker input {
+            font-size: 16px;
+            margin: 5px;
+            height: 30px;
+            border-radius: 5px;
+            background-color: GhostWhite;
+            box-shadow: 0 0 1px ghostwhite;
+            padding: 3px;
+            border: silver;
+
+        }
+
+        .color-picker input:hover {
+            box-shadow: 0 0 3px black;
+        }
+
+
+        .color-picker button {
+            margin: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            padding: 7px;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            background-color: GhostWhite;
+            box-shadow: 0 0 1px GhostWhite;
+            transition: 0.2s
+        }
+
+        .color-picker button:hover {
+            box-shadow: 0 0 3px black;
+            color: rgba(45, 150, 45);
+        }
+
+        .color-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .picked-color {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 10px;
+            background-color: lightgray;
+            box-shadow: 0 0 1px lightgray;
+            border-radius: 10px;
+        }
+
+        .picked-color-box {
+            width: 80px;
+            height: 80px;
+            border: 0;
+            padding: 45px;
+            border-radius: 100%;
+            overflow: hidden;
+        }
+
+        .picked-color-name {
+            font-size: 16px;
+            text-align: center;
+            width: 100px;
+            padding: 7px;
+            margin: 5px;
+            border-radius: 5px;
+            border: 1px solid LightGray;
+            background-color: GhostWhite;
+            box-shadow: 0 0 1px GhostWhite;
+        }
+
+        .picked-color-name:hover {
+            box-shadow: 0 0 3px black;
+        }
+
+        .picked-color button {
+            font-size: 20px;
+            display: grid;
+            justify-content: center;
+            padding: 7px;
+            border-radius: 5px;
+            border: 1px solid LightGray;
+            background-color: GhostWhite;
+            transition: 0.2s;
+            box-shadow: 0 0 1px GhostWhite;
+        }
+
+        .picked-color button:hover {
+            box-shadow: 0 0 3px black;
+            color: rgba(45, 150, 45);
+        }
+
+
+
+
+        @media screen and (max-width:600px) {
+            .header {
+                height: 60px;
+            }
+
+            .header h2 {
+                font-size: 20px;
+            }
+
+            .header a {
+                font-size: 15px;
+            }
+
+
+
+
+            .a1,
+            .a2 {
+                font-size: 14px;
+                font-weight: bold;
+                color: black;
+                text-decoration: none;
+                padding: 4px;
+                transition: 0.2s;
+            }
+
+            .a1:hover,
+            .a2:hover {
+                box-shadow: 0 0 3px black;
+                border-radius: 10px;
+                color: rgb(0, 20, 200);
+                text-decoration: underline;
+            }
+
+            .heading {
+                display: grid;
+                place-items: center;
+                width: 60%;
+                margin: 10px auto;
+                color: black;
+                background-color: silver;
+                border-radius: 10px;
+                padding: 10px;
+                font-size: 22px;
+                font-weight: bold;
+                text-transform: capitalize;
+            }
+
+            #color-display {
+                font-size: 14px;
+                border-radius: 10px;
+                border: 2px double black;
+                padding: 4px;
+                box-shadow: 0 0 1px black;
+            }
+
+            #color-display:hover {
+                color: rgba(45, 150, 45);
+                box-shadow: 0 0 3px black;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h2>
+            <h2><span style="color: mediumblue;">IYR</span></h2>
+            <div class="menu">
+                <a href="index.html">Mon
+                    Accueil</a>
+                <a href="Couleurs Et Code.html">Color
+                    Et Code Hex</a><br>
+                <a href="Calculatrice.html">Mon
+                    Calculatrice</a>
+            </div>
+    </div>
+
+    <div class="heading">
+        <div>
+            <center>All Colors With Hex Codes<br><span id="color-display">Click on the circle to
+                    to see the</span></center>
+        </div>
+
+    </div>
+    <div class="Allcontent">
+        <div class="color-row">
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #000000;"></div>
+                <div class="color-circle-name">
+                    <h1>Black</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #FFFFFF;"></div>
+                <div class="color-circle-name">
+                    <h1>White</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #FF0000;"></div>
+                <div class="color-circle-name">
+                    <h1>Red</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #008000;"></div>
+                <div class="color-circle-name">
+                    <h1>Green</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #0000FF;"></div>
+                <div class="color-circle-name">
+                    <h1>Blue</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #FFFF00;"></div>
+                <div class="color-circle-name">
+                    <h1>Yellow</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #00FFFF;"></div>
+                <div class="color-circle-name">
+                    <h1>Cyan</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #FF00FF;"></div>
+                <div class="color-circle-name">
+                    <h1>Magenta</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #FFA500;"></div>
+                <div class="color-circle-name">
+                    <h1>Orange</h1>
+                </div>
+            </div>
+        </div>
+        <hr class="hr1">
+        <div class="color-row">
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #C0C0C0;"></div>
+                <div class="color-circle-name">
+                    <h1>Silver</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #808080;"></div>
+                <div class="color-circle-name">
+                    <h1>Gray</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #800000;"></div>
+                <div class="color-circle-name">
+                    <h1>Maroon</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #808000;"></div>
+                <div class="color-circle-name">
+                    <h1>Olive</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #800080;"></div>
+                <div class="color-circle-name">
+                    <h1>Purple</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #008080;"></div>
+                <div class="color-circle-name">
+                    <h1>Teal</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #000080;"></div>
+                <div class="color-circle-name">
+                    <h1>Navy</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #00FF00;"></div>
+                <div class="color-circle-name">
+                    <h1>Lime</h1>
+                </div>
+            </div>
+            <div class="circle-name">
+                <div class="color-circle" style="background-color: #FFC0CB;"></div>
+                <div class="color-circle-name">
+                    <h1>Pink</h1>
+                </div>
+            </div>
+        </div>
+        <hr class="hr1">
+
+        <hr class="hr2">
+
+
+
+        <div class="color-picker">
+            <input class="color-box" type="color" style="background-color: silver;">
+            <input class="color-name" type="text" placeholder="color name: ">
+            <button onclick="addColorClick()">Add</button>
+            <button onclick="clearColors()">Clear</button>
+        </div>
+
+        <div class="color-list">
+
+        </div>
+
+
+
+        <center><a href="Plus De Couleurs.html" class="a1">more colors</a></center><br>
+        <center><a href="index.html" class="a2">Back</a></center>
+    </div>
+
+
+
+</body>
+
+<script>
+
+    function handleClick(circle) {
+
+        const rgbString = circle.querySelector('.color-circle').style.backgroundColor;
+        const rgbValues = rgbString.match(/\d+/g);
+
+        if (!rgbValues || rgbValues.length !== 3) {
+            console.error('Invalid RGB value');
+            return;
+        }
+
+        const r = parseInt(rgbValues[0], 10);
+        const g = parseInt(rgbValues[1], 10);
+        const b = parseInt(rgbValues[2], 10);
+
+        const hexColor = rgbToHex(r, g, b);
+
+        const colorName = circle.querySelector('h1').textContent.trim();
+
+        const colorDisplay = document.getElementById('color-display');
+        colorDisplay.textContent = `You Clicked ${colorName}: Rgb(${r}, ${g}, ${b}) Hex: ${hexColor}`;
+    }
+
+    function rgbToHex(r, g, b) {
+
+        r = Math.max(0, Math.min(255, r));
+        g = Math.max(0, Math.min(255, g));
+        b = Math.max(0, Math.min(255, b));
+
+        const hexR = r.toString(16).padStart(2, '0');
+        const hexG = g.toString(16).padStart(2, '0');
+        const hexB = b.toString(16).padStart(2, '0');
+
+        return `#${hexR}${hexG}${hexB}`.toUpperCase();
+    }
+
+    const colorCircles = document.querySelectorAll('.circle-name');
+    colorCircles.forEach(circle => {
+        circle.addEventListener('click', () => handleClick(circle));
+    });
+
+
+
+
+
+
+
+
+
+    const parentList = document.querySelector(".color-list")
+    loadColors()
+
+
+
+    function clearColors() {
+        localStorage.clear()
+        while (parentList.childNodes[1]) {
+            parentList.removeChild(parentList.childNodes[1])
+        }
+    }
+
+    function addColorClick() {
+        saveColorStorage(document.querySelector(".color-name").value, document.querySelector(".color-box").value)
+        saveColorHtml(document.querySelector(".color-name").value, document.querySelector(".color-box").value)
+    }
+
+
+    function getColors() {
+        if (localStorage.getItem("colors") == null) {
+            localStorage.setItem("colors", JSON.stringify([]))
+        }
+
+        return JSON.parse(localStorage.getItem("colors"))
+    }
+
+    function saveColorStorage(name, hexColor, index = null) {
+        const color = {
+            "name": name,
+            "color": hexColor
+        }
+        const colors = getColors()
+        if (index != null) {
+            colors[index] = color
+        } else {
+            colors.push(color)
+        }
+
+        localStorage.setItem("colors", JSON.stringify(colors))
+    }
+
+    function removeFromArrayAtIndex(array, index) {
+        array.splice(index, 1);
+    }
+
+    function saveColorHtml(name, hexColor) {
+        const parentPickedColor = document.createElement("div")
+        const pickedColorBox = document.createElement("input")
+        const pickedColorName = document.createElement("input")
+        const pickedColorRemoveBtn = document.createElement("button")
+
+
+        parentPickedColor.className = "picked-color"
+        pickedColorBox.className = "picked-color-box"
+        pickedColorRemoveBtn.innerHTML = "Remove"
+        pickedColorBox.type = "color"
+
+        pickedColorBox.oninput = (event) => {
+            pickedColorBox.style.backgroundColor = event.srcElement.value
+        }
+        pickedColorBox.onchange = (event) => {
+            for (var a = 1; a < parentList.childNodes.length; a++) {
+                if (event.srcElement.parentNode == parentList.childNodes[a]) {
+                    saveColorStorage(name, event.srcElement.value, a - 1)
+                }
+            }
+        }
+
+        pickedColorName.oninput = (event) => {
+            for (var a = 1; a < parentList.childNodes.length; a++) {
+                if (event.srcElement.parentNode == parentList.childNodes[a]) {
+                    saveColorStorage(event.srcElement.value, hexColor, a - 1)
+                }
+            }
+        }
+
+        pickedColorRemoveBtn.onclick = (event) => {
+
+            for (var a = 1; a < parentList.childNodes.length; a++) {
+                if (event.srcElement.parentNode == parentList.childNodes[a]) {
+                    const colors = getColors()
+                    removeFromArrayAtIndex(colors, a - 1)
+                    localStorage.setItem("colors", JSON.stringify(colors))
+                    event.srcElement.parentNode.remove()
+                }
+            }
+
+
+        }
+        pickedColorName.className = "picked-color-name"
+
+        pickedColorBox.value = hexColor
+        pickedColorBox.style.backgroundColor = hexColor
+        pickedColorName.value = name
+
+
+        parentPickedColor.appendChild(pickedColorBox)
+        parentPickedColor.appendChild(pickedColorName)
+        parentPickedColor.appendChild(pickedColorRemoveBtn)
+
+
+        parentList.appendChild(parentPickedColor)
+    }
+
+    function loadColors() {
+        getColors().forEach((color) => {
+            saveColorHtml(color["name"], color["color"])
+        })
+    }
+
+</script>
