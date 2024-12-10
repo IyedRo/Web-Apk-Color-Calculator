@@ -12,7 +12,9 @@
             color: black;
             text-decoration: none;
             padding: 6px;
-            margin-right: 15px;
+            position: relative;
+            top: 12px;
+            display: grid;
             transition: 0.12s;
         }
 
@@ -212,7 +214,6 @@
             }
 
             #color-display {
-                width: ;
                 font-size: 16px;
             }
         }
@@ -370,11 +371,8 @@
         <div class="color-list">
 
         </div>
-
-
-
-        <center><a href="Plus De Couleurs.html" class="a1">more colors</a></center><br>
-        <center><a href="index.html" class="a2">Back</a></center>
+        <a href="Plus De Couleurs.html" class="a1">more colors</a>
+        <a href="index.html" class="a2">Back</a>
     </div>
 
 
@@ -422,12 +420,6 @@
     colorCircles.forEach(circle => {
         circle.addEventListener('click', () => handleClick(circle));
     });
-
-
-
-
-
-
 
 
 
