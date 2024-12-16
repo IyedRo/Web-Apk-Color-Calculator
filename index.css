@@ -37,22 +37,3 @@ body {
     border-radius: 6px;
     color: #000bd3;
 }
-
-@media screen and (max-width: 600px) {
-    .header {
-        flex-direction: column;
-        padding: 10px;
-    }
-
-    .header .menu {
-        margin-left: 0;
-        margin-top: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .header a {
-        margin: 6px;
-        padding: 6px 10px;
-    }
-}
