@@ -1,5 +1,5 @@
 body {
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 18px;
@@ -17,7 +17,6 @@ body {
     font-size: 22px;
     cursor: pointer;
     margin: 0;
-    color: white;
 }
 
 .header .menu {
@@ -28,10 +27,10 @@ body {
 
 .header a {
     font-weight: bold;
-    color: white;
+    color: #ffffff;
     text-decoration: none;
     padding: 8px 12px;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: 0.12s;
 }
 

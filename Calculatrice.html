@@ -7,64 +7,83 @@
     <link rel="stylesheet" href="index.css">
     <style>
         .calculatrice {
-            margin-top: 40px;
+            margin: 3% auto;
+            background-color: #E5E5E5;
+            border-radius: 8px;
+            border: 1px solid #CECECE;
             padding: 20px;
-            border-radius: 15px;
-            background-color: silver;
-            display: grid;
             width: 300px;
-            height: 400px;
-            justify-items: center;
-            align-items: center;
+            text-align: center;
         }
 
         .calculatrice input[type="text"] {
             width: 100%;
-            height: 35px;
-            font-size: 22px;
-            border: none;
-            border-radius: 10px;
-            background-color: ghostwhite;
-            cursor: pointer;
-            margin-bottom: 10px;
-            padding-left: 2px;
-        }
-
-        .calculatrice input[type="text"]:hover {
-            box-shadow: 0 0 3px black;
+            height: 50px;
+            font-size: 24px;
+            text-align: right;
+            background-color: #ffffff;
+            border: 1px solid #E5E5E5;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+            box-sizing: border-box;
         }
 
         .calculatrice input[type="button"] {
-            border-radius: 5px;
-            background-color: GhostWhite;
-            border: 0;
-            margin: 4px;
-            padding: 8px;
-            transition: 0.2s;
-            width: 60px;
-            height: 45px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: none;
             font-size: 20px;
+            width: 60px;
+            height: 50px;
+            margin: 5px;
+            transition: 0.12s;
+            cursor: pointer;
         }
 
         .calculatrice input[type="button"]:hover {
-            box-shadow: 0 0 3px black;
-            color: rgba(45, 150, 45);
+            background-color: #CECECE;
+        }
+
+        .calculatrice input[type="button"].operator {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .calculatrice input[type="button"].operator:hover {
+            background-color: #006EE5;
+        }
+
+        .calculatrice input[type="button"].equal {
+            background-color: #28a745;
+            color: white;
+        }
+
+        .calculatrice input[type="button"].equal:hover {
+            background-color: #24963E;
+        }
+
+        .calculatrice input[type="button"].clear {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .calculatrice input[type="button"].clear:hover {
+            background-color: #C62F3E;
         }
 
         .a {
             position: relative;
             top: 46px;
             font-weight: bold;
-            color: black;
+            color: #333;
             text-decoration: none;
             padding: 6px;
             transition: 0.2s;
         }
 
         .a:hover {
-            box-shadow: 0 0 2px rgba(0, 0, 0);
-            border-radius: 6px;
-            color: rgb(0, 10, 200);
+            color: #4CAF50;
         }
     </style>
 </head>
@@ -82,43 +101,39 @@
                     Calculatrice</a>
             </div>
     </div>
-
-    <center>
-        <div class="calculatrice">
-            <input type="text" id="display" name="display" readonly>
-            <div>
-                <input type="button" value="Ac" onclick="clearDisplay()">
-                <input type="button" value="%" onclick="appendToDisplay('%')">
-                <input type="button" value="Del" onclick="backspace()">
-                <input type="button" value="/" onclick="appendToDisplay('/')">
-            </div>
-            <div>
-                <input type="button" value="7" onclick="appendToDisplay('7')">
-                <input type="button" value="8" onclick="appendToDisplay('8')">
-                <input type="button" value="9" onclick="appendToDisplay('9')">
-                <input type="button" value="*" onclick="appendToDisplay('*')">
-            </div>
-            <div>
-                <input type="button" value="4" onclick="appendToDisplay('4')">
-                <input type="button" value="5" onclick="appendToDisplay('5')">
-                <input type="button" value="6" onclick="appendToDisplay('6')">
-                <input type="button" value="-" onclick="appendToDisplay('-')">
-            </div>
-            <div>
-                <input type="button" value="1" onclick="appendToDisplay('1')">
-                <input type="button" value="2" onclick="appendToDisplay('2')">
-                <input type="button" value="3" onclick="appendToDisplay('3')">
-                <input type="button" value="+" onclick="appendToDisplay('+')">
-            </div>
-            <div>
-                <input type="button" value="00" onclick="appendToDisplay('00')">
-                <input type="button" value="0" onclick="appendToDisplay('0')">
-                <input type="button" value="." onclick="appendToDisplay('.')">
-                <input type="button" value="=" onclick="calculate()">
-            </div>
+    <div class="calculatrice">
+        <input type="text" id="display" name="display" readonly>
+        <div>
+            <input type="button" class="clear" value="Ac" onclick="clearDisplay()">
+            <input type="button" value="Del" onclick="backspace()">
+            <input type="button" class="operator" value="%" onclick="appendToDisplay('%')">
+            <input type="button" class="operator" value="/" onclick="appendToDisplay('/')">
         </div>
-    </center>
-
+        <div>
+            <input type="button" value="7" onclick="appendToDisplay('7')">
+            <input type="button" value="8" onclick="appendToDisplay('8')">
+            <input type="button" value="9" onclick="appendToDisplay('9')">
+            <input type="button" class="operator" value="*" onclick="appendToDisplay('*')">
+        </div>
+        <div>
+            <input type="button" value="4" onclick="appendToDisplay('4')">
+            <input type="button" value="5" onclick="appendToDisplay('5')">
+            <input type="button" value="6" onclick="appendToDisplay('6')">
+            <input type="button" class="operator" value="-" onclick="appendToDisplay('-')">
+        </div>
+        <div>
+            <input type="button" value="1" onclick="appendToDisplay('1')">
+            <input type="button" value="2" onclick="appendToDisplay('2')">
+            <input type="button" value="3" onclick="appendToDisplay('3')">
+            <input type="button" class="operator" value="+" onclick="appendToDisplay('+')">
+        </div>
+        <div>
+            <input type="button" value="00" onclick="appendToDisplay('00')">
+            <input type="button" value="0" onclick="appendToDisplay('0')">
+            <input type="button" value="." onclick="appendToDisplay('.')">
+            <input type="button" class="equal" value="=" onclick="calculate()">
+        </div>
+    </div>
     <center>
         <a href="index.html" class="a">Back</a>
     </center>
@@ -128,21 +143,42 @@
 </html>
 
 <script>
+    const display = document.getElementById('display');
+
     function appendToDisplay(value) {
-        document.getElementById('display').value += value;
+        display.value += value;
     }
 
     function clearDisplay() {
-        document.getElementById('display').value = '';
+        display.value = '';
     }
 
     function backspace() {
-        let currentValue = document.getElementById('display').value;
-        document.getElementById('display').value = currentValue.slice(0, -1);
+        display.value = display.value.slice(0, -1);
     }
 
     function calculate() {
-        let result = eval(document.getElementById('display').value);
-        document.getElementById('display').value = result;
+        try {
+            const result = eval(display.value);
+            if (isNaN(result) || !isFinite(result)) {
+                throw new Error('Invalid expression');
+            }
+            display.value = result;
+        } catch (error) {
+            display.value = 'Error';
+        }
     }
+
+    document.addEventListener('keydown', (event) => {
+        const key = event.key;
+        if (/[0-9+\-*/%.]/.test(key)) {
+            appendToDisplay(key);
+        } else if (key === 'Enter') {
+            calculate();
+        } else if (key === 'Backspace') {
+            backspace();
+        } else if (key === 'Escape') {
+            clearDisplay();
+        }
+    });
 </script>

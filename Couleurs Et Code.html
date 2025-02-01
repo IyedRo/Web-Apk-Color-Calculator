@@ -21,7 +21,7 @@
         .a1:hover,
         .a2:hover {
             box-shadow: 0 0 2px rgba(0, 0, 0);
-            border-radius: 6px;
+            border-radius: 8px;
             color: rgb(0, 10, 200);
         }
 
@@ -29,8 +29,9 @@
             display: grid;
             width: 60%;
             margin: 20px auto;
-            background-color: silver;
-            border-radius: 15px;
+            background-color: #E5E5E5;
+            border: 1px solid #CECECE;
+            border-radius: 8px;
             padding: 14px;
             font-size: 30px;
             font-weight: bold;
@@ -39,9 +40,9 @@
 
         #color-display {
             font-size: 20px;
-            border-radius: 5px;
+            border-radius: 8px;
             border: 2px double black;
-            background-color: LightGray;
+            background-color: #CECECE;
             padding: 8px;
         }
 
@@ -55,8 +56,9 @@
             margin: 20px auto;
             padding: 26px;
             width: 85%;
-            border-radius: 15px;
-            background-color: silver;
+            border-radius: 8px;
+            background-color: #E5E5E5;
+            border: 1px solid #CECECE;
         }
 
         .color-row {
@@ -65,8 +67,8 @@
         }
 
         .circle-name {
-            background-color: lightgray;
-            border-radius: 10px;
+            background-color: #CECECE;
+            border-radius: 8px;
             margin: 4px;
         }
 
@@ -93,12 +95,12 @@
         .color-circle-name h1 {
             color: #000000;
             margin-top: 10px;
-            border-radius: 5px;
-            padding: 4px;
+            border-radius: 8px;
+            padding: 2px;
+            border: 1px solid #CECECE;
         }
 
         .color-circle-name h1:hover {
-            border-radius: 5px;
             box-shadow: 0 0 3px black;
             color: rgba(45, 150, 45);
         }
@@ -119,21 +121,23 @@
             align-items: center;
             margin-bottom: 20px;
             padding: 10px;
+            border-radius: 8px;
+            background-color: #CECECE;
         }
 
         .color-picker input {
             font-size: 16px;
             margin: 5px;
             height: 30px;
-            border-radius: 5px;
-            background-color: GhostWhite;
+            border-radius: 8px;
+            background-color: #ffffff;
             padding: 4px;
-            border: silver;
+            border: 1px solid #CECECE;
 
         }
 
         .color-picker input:hover {
-            box-shadow: 0 0 3px black;
+            border-color: #4CAF50;
         }
 
 
@@ -142,15 +146,14 @@
             cursor: pointer;
             font-size: 20px;
             padding: 8px;
-            border-radius: 5px;
-            border: 1px solid lightgray;
-            background-color: GhostWhite;
+            border-radius: 8px;
+            border: 1px solid #CECECE;
+            background-color: #ffffff;
             transition: 0.2s
         }
 
         .color-picker button:hover {
-            box-shadow: 0 0 3px black;
-            color: rgba(45, 150, 45);
+            border-color: #4CAF50;
         }
 
         .color-list {
@@ -164,8 +167,8 @@
             flex-direction: column;
             align-items: center;
             padding: 10px;
-            background-color: lightgray;
-            border-radius: 10px;
+            background-color: #CECECE;
+            border-radius: 8px;
         }
 
         .picked-color-box {
@@ -183,9 +186,9 @@
             width: 100px;
             padding: 8px;
             margin: 5px;
-            border-radius: 5px;
-            border: 1px solid LightGray;
-            background-color: GhostWhite;
+            border-radius: 8px;
+            border: 1px solid #CECECE;
+            background-color: #ffffff;
         }
 
         .picked-color-name:hover {
@@ -197,9 +200,9 @@
             display: grid;
             justify-content: center;
             padding: 8px;
-            border-radius: 5px;
-            border: 1px solid LightGray;
-            background-color: GhostWhite;
+            border-radius: 8px;
+            border: 1px solid #CECECE;
+            background-color: #ffffff;
             transition: 0.2s;
         }
 
@@ -346,13 +349,9 @@
             </div>
         </div>
         <hr class="hr1">
-
         <hr class="hr2">
-
-
-
         <div class="color-picker">
-            <input class="color-box" type="color" style="background-color: silver;">
+            <input class="color-box" type="color">
             <input class="color-name" type="text" placeholder="color name: ">
             <button onclick="addColorClick()">Add</button>
             <button onclick="clearColors()">Clear</button>
@@ -364,13 +363,9 @@
         <a href="Plus De Couleurs.html" class="a1">more colors</a>
         <a href="index.html" class="a2">Back</a>
     </div>
-
-
-
 </body>
 
 <script>
-
     function handleClick(circle) {
 
         const rgbString = circle.querySelector('.color-circle').style.backgroundColor;
@@ -522,5 +517,4 @@
             saveColorHtml(color["name"], color["color"])
         })
     }
-
 </script>

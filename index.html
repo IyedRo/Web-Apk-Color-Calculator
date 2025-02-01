@@ -9,10 +9,11 @@
         .main-content {
             text-align: center;
             margin: 20px auto;
-            border-radius: 15px;
+            border-radius: 8px;
             width: 60%;
             padding: 20px;
-            background-color: silver;
+            background-color: #E5E5E5;
+            border: 1px solid #CECECE;
         }
 
         .main-content h1 {
@@ -24,18 +25,21 @@
             text-align: left;
             margin-top: 20px;
             margin: 20px auto;
-            border-radius: 15px;
+            border-radius: 8px;
             width: 90%;
             padding: 20px;
-            background-color: silver;
+            background-color: #E5E5E5;
+            border: 1px solid #CECECE;
         }
 
         hr {
-            border: 1px solid black;
+            border: 1px solid #CECECE;
+            margin: 20px 0;
         }
 
         .span1 {
             text-indent: 20px;
+            display: block;
         }
 
         .app-row {
@@ -43,35 +47,38 @@
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 20px;
+            gap: 15px;
         }
 
         .app-info {
             text-align: center;
-            background-color: lightgray;
+            background-color: #ffffff;
+            border: 1px solid #CECECE;
             padding: 6px;
-            border-radius: 10px;
+            border-radius: 8px;
             align-items: center;
             margin: 10px;
             cursor: pointer;
-            transition: 0.2;
+            width: 150px;
+            transition: 0.12s ease;
         }
 
         .app-info:hover {
-            box-shadow: 0 0 2px rgba(45, 150, 45);
-            color: rgba(45, 150, 45);
+            transform: translateY(-5px);
+            border-color: #4CAF50;
         }
 
         .app-icon img {
-            border-radius: 12px;
+            border-radius: 8px;
         }
 
         .app-name h1 {
-            font-size: 20px;
+            font-size: 18px;
             color: black;
         }
 
         .app-name h1:hover {
-            color: rgba(45, 150, 45);
+            color: #4CAF50;
         }
     </style>
 </head>
