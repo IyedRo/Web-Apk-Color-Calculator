@@ -22,17 +22,17 @@ body {
 
 .header .menu {
     display: flex;
-    gap: 1vw;
     margin-left: auto;
 }
 
 .header .menu a {
+    border-radius: 8px;
+    margin: 0 0.8vw;
+    padding: 0.8vw 1.2vw;
     font-weight: bold;
     color: white;
     text-decoration: none;
-    padding: 0.8vw 1.2vw;
-    border-radius: 8px;
-    transition: 0.2s;
+    transition: 0.14s;
 }
 
 .header .menu a:hover {
