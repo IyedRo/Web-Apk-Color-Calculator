@@ -7,36 +7,36 @@ body {
 
 .header {
     background-color: #279036;
-    padding: 10px 20px;
+    padding: 0.6vw 1vw;
     display: flex;
     align-items: center;
-    transition: 0.12s;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
 }
 
 .header h2 {
-    font-size: 22px;
-    cursor: pointer;
+    font-size: 1.4rem;
     margin: 0;
+    color: white;
+    cursor: pointer;
 }
 
 .header .menu {
     display: flex;
-    gap: 16px;
+    gap: 1vw;
     margin-left: auto;
 }
 
-.header a {
+.header .menu a {
     font-weight: bold;
-    color: #ffffff;
+    color: white;
     text-decoration: none;
-    padding: 8px 12px;
+    padding: 0.8vw 1.2vw;
     border-radius: 8px;
-    transition: 0.12s;
+    transition: 0.2s;
 }
 
-.header a:hover {
-    box-shadow: 0 0 3px black;
-    color: #000bd3;
+.header .menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 @media screen and (max-width: 600px) {
