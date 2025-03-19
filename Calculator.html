@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Calculator IYR</title>
     <link rel="stylesheet" href="index.css">
     <style>
-        .calculatrice{margin: 3% auto;
+        .calculatrice {
+            margin: 3% auto;
             background-color: #E5E5E5;
             border-radius: 8px;
             padding: 20px;
             width: 300px;
-            text-align: center;}.calculatrice input[type="text"]{width: 100%;
+            text-align: center;
+        }
+
+        .calculatrice input[type="text"] {
+            width: 100%;
             height: 50px;
             font-size: 24px;
             text-align: right;
@@ -19,7 +25,11 @@
             border-radius: 8px;
             padding: 10px;
             margin-bottom: 20px;
-            box-sizing: border-box;}.calculatrice input[type="button"]{background-color: #ffffff;
+            box-sizing: border-box;
+        }
+
+        .calculatrice input[type="button"] {
+            background-color: #ffffff;
             border-radius: 8px;
             border: none;
             font-size: 20px;
@@ -27,17 +37,56 @@
             height: 50px;
             margin: 5px;
             transition: 0.14s;
-            cursor: pointer;}.calculatrice input[type="button"]:hover{background-color: #CECECE;}.calculatrice input[type="button"].operator{background-color: #005EFF;
-            color: white;}.calculatrice input[type="button"].operator:hover{background-color: #0054E5;}.calculatrice input[type="button"].equal{background-color: #2CA13D;
-            color: white;}.calculatrice input[type="button"].equal:hover{background-color: #279036;}.calculatrice input[type="button"].clear{background-color: #FF2A3B;
-            color: white;}.calculatrice input[type="button"].clear:hover{background-color: #E52535;}.a{position: relative;
+            cursor: pointer;
+        }
+
+        .calculatrice input[type="button"]:hover {
+            background-color: #CECECE;
+        }
+
+        .calculatrice input[type="button"].operator {
+            background-color: #005EFF;
+            color: white;
+        }
+
+        .calculatrice input[type="button"].operator:hover {
+            background-color: #0054E5;
+        }
+
+        .calculatrice input[type="button"].equal {
+            background-color: #2CA13D;
+            color: white;
+        }
+
+        .calculatrice input[type="button"].equal:hover {
+            background-color: #279036;
+        }
+
+        .calculatrice input[type="button"].clear {
+            background-color: #FF2A3B;
+            color: white;
+        }
+
+        .calculatrice input[type="button"].clear:hover {
+            background-color: #E52535;
+        }
+
+        .a {
+            position: relative;
             top: 46px;
             font-weight: bold;
             color: #333;
             text-decoration: none;
             padding: 6px;
-            transition: 0.14s;}.a:hover{color: #28A745;}</style>
+            transition: 0.14s;
+        }
+
+        .a:hover {
+            color: #28A745;
+        }
+    </style>
 </head>
+
 <body>
     <div class="header">
         <h2>
@@ -88,11 +137,18 @@
         <a href="index.html" class="a">Back</a>
     </center>
 </body>
+
 </html>
 <script>
-    const display=document.getElementById('display');
-    function appendToDisplay(value){display.value+=value;}function clearDisplay(){display.value='';}function backspace(){display.value=display.value.slice(0, -1);}function calculate(){try{const result=eval(display.value);
-            if (isNaN(result) || !isFinite(result)){throw new Error('Invalid expression');}display.value=result;}catch (error){display.value='Error';}}
-    document.addEventListener('keydown', (event) =>{const key=event.key;
-        if (/[0-9+\-*/%.]/.test(key)){appendToDisplay(key);}else if (key === 'Enter'){calculate();}else if (key === 'Backspace'){backspace();}else if (key === 'Escape'){clearDisplay();}});
+    const display = document.getElementById('display');
+    function appendToDisplay(value) { display.value += value; } function clearDisplay() { display.value = ''; } function backspace() { display.value = display.value.slice(0, -1); } function calculate() {
+        try {
+            const result = eval(display.value);
+            if (isNaN(result) || !isFinite(result)) { throw new Error('Invalid expression'); } display.value = result;
+        } catch (error) { display.value = 'Error'; }
+    }
+    document.addEventListener('keydown', (event) => {
+        const key = event.key;
+        if (/[0-9+\-*/%.]/.test(key)) { appendToDisplay(key); } else if (key === 'Enter') { calculate(); } else if (key === 'Backspace') { backspace(); } else if (key === 'Escape') { clearDisplay(); }
+    });
 </script>

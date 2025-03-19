@@ -1,29 +1,55 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="UTF-8">
     <title>Accueil IYR</title>
     <link rel="stylesheet" href="index.css">
     <style>
-        .main-content{text-align: center;
+        .main-content {
+            text-align: center;
             margin: 20px auto;
             border-radius: 8px;
             width: 60%;
             padding: 20px;
-            background-color: #E5E5E5;}.main-content h1{font-size: 30px;
-            margin: 0;}.main-content1{text-align: left;
+            background-color: #E5E5E5;
+        }
+
+        .main-content h1 {
+            font-size: 30px;
+            margin: 0;
+        }
+
+        .main-content1 {
+            text-align: left;
             margin-top: 20px;
             margin: 20px auto;
             border-radius: 8px;
             width: 90%;
             padding: 20px;
-            background-color: #E5E5E5;}hr{border: 1px solid #CECECE;
-            margin: 20px 0;}.span1{text-indent: 20px;
-            display: block;}.app-row{display: flex;
+            background-color: #E5E5E5;
+        }
+
+        hr {
+            border: 1px solid #CECECE;
+            margin: 20px 0;
+        }
+
+        .span1 {
+            text-indent: 20px;
+            display: block;
+        }
+
+        .app-row {
+            display: flex;
             flex-wrap: wrap;
             justify-content: center;
             margin-top: 20px;
-            gap: 15px;}.app-info{text-align: center;
+            gap: 15px;
+        }
+
+        .app-info {
+            text-align: center;
             background-color: #ffffff;
             border: 1px solid #E5E5E5;
             padding: 6px;
@@ -32,10 +58,29 @@
             margin: 10px;
             cursor: pointer;
             width: 150px;
-            transition: 0.14s;}.app-info:hover{transform: translateY(-5px);
-            border-color: #28A745;}.app-icon img{border-radius: 8px;}.app-name h1{font-size: 18px;
-            color: black;}.app-name h1:hover{color: #2CA13D;}</style>
+            transition: 0.14s;
+        }
+
+        .app-info:hover {
+            transform: translateY(-5px);
+            border-color: #28A745;
+        }
+
+        .app-icon img {
+            border-radius: 8px;
+        }
+
+        .app-name h1 {
+            font-size: 18px;
+            color: black;
+        }
+
+        .app-name h1:hover {
+            color: #2CA13D;
+        }
+    </style>
 </head>
+
 <body>
     <div class="header">
         <h2><span style="color: white;">IYR</span></h2>
@@ -191,7 +236,17 @@
                     <h1>Counter-Strike 1.6</h1>
                 </div>
             </div>
+            <div class="app-info"
+                onclick="window.location.href='https://drive.google.com/file/d/1j8BXk8NstSl3C-rDBOgmdmRlP6LZci3l/view?usp=drive_link';">
+                <div class="app-icon">
+                    <img src="FileOptimizer.webp" alt="LogoIYR4" width="100px" height="100px">
+                </div>
+                <div class="app-name">
+                    <h1>FileOptimizer</h1>
+                </div>
+            </div>
         </div>
     </div>
 </body>
+
 </html>
