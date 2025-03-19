@@ -1,23 +1,59 @@
-body{background-color: #ffffff;
+body {
+    background-color: #ffffff;
     margin: 0;
     font-family: Arial, sans-serif;
-    font-size: 18px;}.header{background-color: #279036;
-    padding: 0.6vw 1vw;
+    font-size: 18px;
+}
+
+.header {
+    background-color: #279036;
+    padding: 0.5vw 1vw;
     display: flex;
     align-items: center;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);}.header h2{font-size: 1.4rem;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.header h2 {
+    font-size: 1.4rem;
     margin: 0;
     color: white;
-    cursor: pointer;}.header .menu{display: flex;
-    margin-left: auto;}.header .menu a{border-radius: 8px;
+    cursor: pointer;
+}
+
+.header .menu {
+    display: flex;
+    margin-left: auto;
+}
+
+.header .menu a {
+    border-radius: 8px;
     margin: 0 0.8vw;
     padding: 0.8vw 1.2vw;
     font-weight: bold;
     color: white;
     text-decoration: none;
-    transition: 0.14s;}.header .menu a:hover{background-color: rgba(255, 255, 255, 0.2);}@media screen and (max-width: 600px){.header{flex-direction: column;
-        padding: 10px;}.header .menu{margin-left: 0;
+    transition: 0.14s;
+}
+
+.header .menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+@media screen and (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .header .menu {
+        margin-left: 0;
         margin-top: 10px;
         flex-wrap: wrap;
-        justify-content: center;}.header a{margin: 6px;
-        padding: 6px 10px;}}
+        justify-content: center;
+    }
+
+    .header a {
+        margin: 6px;
+        padding: 6px 10px;
+    }
+}
