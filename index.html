@@ -8,56 +8,62 @@
     <style>
         .main-content {
             text-align: center;
-            margin: 20px auto;
-            border-radius: 8px;
-            width: 60%;
+            border-radius: 12px;
+            width: 92%;
             padding: 20px;
-            background-color: #E5E5E5;
+            margin: 20px auto;
+            background-color: #EFEFF0;
         }
 
         .main-content h1 {
-            font-size: 30px;
+            font-size: 1.75rem;
             margin: 0;
+        }
+
+        .notice {
+            background-color: #fff8f8;
+            color: #FF0000;
+            padding: 12px 16px;
+            border-radius: 12px;
+            border-left: 2px solid #FF0000;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
         }
 
         .main-content1 {
             text-align: left;
             margin-top: 20px;
             margin: 20px auto;
-            border-radius: 8px;
-            width: 90%;
+            border-radius: 12px;
+            width: 92%;
             padding: 20px;
-            background-color: #E5E5E5;
-        }
-
-        hr {
-            border: 1px solid #CECECE;
-            margin: 16px 0;
+            background-color: #EFEFF0;
         }
 
         .span1 {
             text-indent: 20px;
             display: block;
+            line-height: 1.5;
         }
 
         .app-row {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin: 16px 0 0 0;
-            gap: 15px;
+            margin: 20px 0 0 0;
+            gap: 16px;
         }
 
         .app-info {
             text-align: center;
             background-color: #ffffff;
-            border: 1px solid #E5E5E5;
-            border-radius: 8px;
+            border: 1px solid #EFEFF0;
+            border-radius: 12px;
             align-items: center;
-            padding: 8px 0 0 0;
+            padding: 12px 0 8px 0;
             cursor: pointer;
             width: 140px;
-            transition: 0.14s;
+            transition: all 0.16s;
         }
 
         .app-info:hover {
@@ -65,17 +71,21 @@
             border-color: #28A745;
         }
 
+        .app-info:active {
+            transform: translateY(0);
+        }
+
         .app-icon img {
-            border-radius: 8px;
+            border-radius: 12px;
         }
 
         .app-name h1 {
-            font-size: 18px;
-            color: black;
+            font-size: 1.125rem;
+            font-weight: 500;
         }
 
-        .app-name h1:hover {
-            color: #2CA13D;
+        .app-info:hover .app-name h1 {
+            color: #28A745;
         }
     </style>
 </head>
@@ -96,15 +106,14 @@
         <h1>Welcome to IYR App Downloads</h1>
     </div>
     <div class="main-content1">
-        <p style="color: #ff1a1a;">
-            ⚠️ Important Notice: Downloading modified applications can pose significant security risks. These modified
-            versions may:
-        <ul style="color: #ff1a1a;">
-            <li>Lack official security measures</li>
-            <li>Violate intellectual property rights</li>
-            <li>Potentially harm your device</li>
-        </ul>
-        </p>
+        <div class="notice">
+            <strong>⚠️ Important Notice: Downloading modified applications can pose significant security risks.</strong>
+            <ul>
+                <li>Lack official security measures</li>
+                <li>Violate intellectual property rights</li>
+                <li>Potentially harm your device</li>
+            </ul>
+        </div>
         <hr>
         <div>
             <h2>Download Apps <span style="color: #ff1a1a;">(.apk)</span><br></h2><span class="span1">Click on an app

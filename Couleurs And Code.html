@@ -6,56 +6,37 @@
     <title>Colors And Code IYR</title>
     <link rel="stylesheet" href="index.css">
     <style>
-        .a1,
-        .a2 {
-            border-radius: 8px;
-            font-weight: bold;
-            color: black;
-            text-decoration: none;
-            padding: 6px;
-            position: relative;
-            top: 12px;
-            display: grid;
-            transition: 0.14s;
-        }
-
-        .a1:hover,
-        .a2:hover {
-            color: rgb(0, 10, 200);
-            box-shadow: 0 0 2px rgba(0, 0, 0, 2);
-        }
-
         .heading {
-            background-color: #E5E5E5;
-            border-radius: 8px;
+            background-color: #EFEFF0;
+            border-radius: 12px;
             display: grid;
-            width: 60%;
+            width: 92%;
             margin: 20px auto;
-            padding: 14px;
+            padding: 20px;
             font-size: 30px;
             font-weight: bold;
             text-transform: capitalize;
         }
 
         #color-display {
-            background-color: #CECECE;
-            font-size: 20px;
-            border-radius: 8px;
-            padding: 8px;
+            background-color: #D7D7D8;
+            font-size: 22px;
+            border-radius: 12px;
+            padding: 12px;
+            margin: 10px 0;
         }
 
         #color-display:hover {
             color: rgba(45, 150, 45);
-            box-shadow: 0 0 2px rgba(0, 0, 0, 2);
         }
 
         .Allcontent {
-            background-color: #E5E5E5;
-            border-radius: 8px;
+            background-color: #EFEFF0;
+            border-radius: 12px;
             justify-items: center;
             margin: 20px auto;
-            padding: 26px;
-            width: 85%;
+            padding: 20px;
+            width: 92%;
         }
 
         .color-row {
@@ -64,17 +45,18 @@
         }
 
         .circle-name {
-            background-color: #CECECE;
-            border-radius: 8px;
+            background-color: #D7D7D8;
+            border-radius: 12px;
             margin: 4px;
+            padding: 4px;
         }
 
         .color-circle {
-            width: 75px;
-            height: 75px;
+            width: 80px;
+            height: 80px;
             border-radius: 50%;
-            margin: 22px 22px 0 22px;
-            transition: 0.14s;
+            margin: 20px;
+            transition: all 0.16s;
         }
 
         .color-circle:hover {
@@ -92,38 +74,30 @@
         .color-circle-name h1 {
             color: #000000;
             margin-top: 10px;
-            border-radius: 8px;
-            padding: 2px;
+            border-radius: 12px;
+            padding: 4px;
         }
 
         .color-circle-name h1:hover {
             color: rgba(45, 150, 45);
         }
 
-        .hr1 {
-            border: 1px solid black;
-        }
-
-        .hr2 {
-            border: 1px solid black;
-        }
-
         .color-picker {
-            background-color: #CECECE;
-            border-radius: 8px;
+            background-color: #D7D7D8;
+            border-radius: 12px;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-bottom: 20px;
-            padding: 10px;
+            padding: 12px;
         }
 
         .color-picker input {
             background-color: #ffffff;
-            border: 1px solid #E5E5E5;
-            border-radius: 8px;
-            font-size: 16px;
-            margin: 5px;
+            border: 1px solid #EFEFF0;
+            border-radius: 12px;
+            font-size: 18px;
+            margin: 6px;
             height: 30px;
             padding: 4px;
         }
@@ -134,17 +108,18 @@
 
         .color-picker button {
             background-color: #ffffff;
-            border: 1px solid #E5E5E5;
-            border-radius: 8px;
-            margin: 5px;
+            border: 1px solid #EFEFF0;
+            border-radius: 12px;
+            margin: 6px;
             cursor: pointer;
-            font-size: 20px;
-            padding: 8px;
-            transition: 0.14s;
+            font-size: 18px;
+            padding: 10px;
+            transition: all 0.16s;
         }
 
         .color-picker button:hover {
             border-color: #28A745;
+            background-color: #f0f0f0;
         }
 
         .color-list {
@@ -154,12 +129,12 @@
         }
 
         .picked-color {
-            background-color: #CECECE;
-            border-radius: 8px;
+            background-color: #D7D7D8;
+            border-radius: 12px;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 10px;
+            padding: 8px;
         }
 
         .picked-color-box {
@@ -173,13 +148,13 @@
 
         .picked-color-name {
             background-color: #ffffff;
-            border: 1px solid #E5E5E5;
-            border-radius: 8px;
-            font-size: 16px;
+            border: 1px solid #EFEFF0;
+            border-radius: 12px;
+            font-size: 18px;
             text-align: center;
             width: 100px;
             padding: 8px;
-            margin: 5px;
+            margin: 6px;
         }
 
         .picked-color-name:hover {
@@ -188,17 +163,40 @@
 
         .picked-color button {
             background-color: #ffffff;
-            border: 1px solid #E5E5E5;
+            border: 1px solid #EFEFF0;
             border-radius: 8px;
             font-size: 20px;
-            display: grid;
-            justify-content: center;
-            padding: 8px;
-            transition: 0.14s;
+            padding: 10px;
+            transition: all 0.16s;
         }
 
         .picked-color button:hover {
             border-color: #28A745;
+            background-color: #f0f0f0;
+        }
+
+        .a {
+            background-color: #fff;
+            display: grid;
+            font-weight: 500;
+            color: black;
+            text-decoration: none;
+            padding: 8px 12px;
+            margin: 8px 12px;
+            border-radius: 8px;
+            margin-right: 16px;
+            transition: all 0.16s;
+        }
+
+        .a:hover {
+            color: rgb(0, 10, 200);
+            background-color: #e0e0ff;
+            transform: translateY(-2px);
+        }
+
+
+        .a:active {
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -223,6 +221,16 @@
         </div>
     </div>
     <div class="Allcontent">
+        <div class="color-picker">
+            <input class="color-box" type="color">
+            <input class="color-name" type="text" placeholder="color name: ">
+            <button onclick="addColorClick()">Add</button>
+            <button onclick="clearColors()">Clear</button>
+        </div>
+        <div class="color-list">
+        </div>
+        <h1>Default Colors
+        </h1>
         <div class="color-row">
             <div class="circle-name">
                 <div class="color-circle" style="background-color: #000000;"></div>
@@ -279,7 +287,7 @@
                 </div>
             </div>
         </div>
-        <hr class="hr1">
+        <hr>
         <div class="color-row">
             <div class="circle-name">
                 <div class="color-circle" style="background-color: #C0C0C0;"></div>
@@ -336,35 +344,14 @@
                 </div>
             </div>
         </div>
-        <hr class="hr1">
-        <hr class="hr2">
-        <div class="color-picker">
-            <input class="color-box" type="color">
-            <input class="color-name" type="text" placeholder="color name: ">
-            <button onclick="addColorClick()">Add</button>
-            <button onclick="clearColors()">Clear</button>
-        </div>
-        <div class="color-list">
-        </div>
-        <a href="Plus De Couleurs.html" class="a1">more colors</a>
-        <a href="index.html" class="a2">Back</a>
+        <a href="Plus De Couleurs.html" class="a">more colors</a>
+        <a href="index.html" class="a">Back</a>
     </div>
 </body>
+
+</html>
 <script>
-    function handleClick(circle) {
-        const rgbString = circle.querySelector('.color-circle').style.backgroundColor;
-        const rgbValues = rgbString.match(/\d+/g);
-        if (!rgbValues || rgbValues.length !== 3) {
-            console.error('Invalid RGB value');
-            return;
-        } const r = parseInt(rgbValues[0], 10);
-        const g = parseInt(rgbValues[1], 10);
-        const b = parseInt(rgbValues[2], 10);
-        const hexColor = rgbToHex(r, g, b);
-        const colorName = circle.querySelector('h1').textContent.trim();
-        const colorDisplay = document.getElementById('color-display');
-        colorDisplay.textContent = `You Clicked ${colorName}: Rgb(${r}, ${g}, ${b}) Hex: ${hexColor}`;
-    } function rgbToHex(r, g, b) {
+    function rgbToHex(r, g, b) {
         r = Math.max(0, Math.min(255, r));
         g = Math.max(0, Math.min(255, g));
         b = Math.max(0, Math.min(255, b));
@@ -372,53 +359,116 @@
         const hexG = g.toString(16).padStart(2, '0');
         const hexB = b.toString(16).padStart(2, '0');
         return `#${hexR}${hexG}${hexB}`.toUpperCase();
-    } const colorCircles = document.querySelectorAll('.circle-name');
+    }
+
+    function handleClick(circle) {
+        const rgbString = circle.querySelector('.color-circle').style.backgroundColor;
+        const rgbValues = rgbString.match(/\d+/g);
+
+        if (!rgbValues || rgbValues.length !== 3) {
+            console.error('Invalid RGB value');
+            return;
+        }
+
+        const [r, g, b] = rgbValues.map(val => parseInt(val, 10));
+        const hexColor = rgbToHex(r, g, b);
+        const colorName = circle.querySelector('h1').textContent.trim();
+        const colorDisplay = document.getElementById('color-display');
+        colorDisplay.textContent = `You Clicked ${colorName}: Rgb(${r}, ${g}, ${b}) Hex: ${hexColor}`;
+    }
+
+    const colorCircles = document.querySelectorAll('.circle-name');
     colorCircles.forEach(circle => {
         circle.addEventListener('click', () => handleClick(circle));
     });
-    const parentList = document.querySelector(".color-list")
-    loadColors()
+
+    const parentList = document.querySelector(".color-list");
+
     function clearColors() {
-        localStorage.clear()
-        while (parentList.childNodes[1]) { parentList.removeChild(parentList.childNodes[1]) }
+        localStorage.clear();
+        while (parentList.firstChild) {
+            parentList.removeChild(parentList.firstChild);
+        }
     }
+
     function addColorClick() {
-        saveColorStorage(document.querySelector(".color-name").value, document.querySelector(".color-box").value)
-        saveColorHtml(document.querySelector(".color-name").value, document.querySelector(".color-box").value)
-    } function getColors() { if (localStorage.getItem("colors") == null) { localStorage.setItem("colors", JSON.stringify([])) } return JSON.parse(localStorage.getItem("colors")) } function saveColorStorage(name, hexColor, index = null) {
-        const color = {
-            "name": name,
-            "color": hexColor
-        }const colors = getColors()
-        if (index != null) { colors[index] = color } else { colors.push(color) } localStorage.setItem("colors", JSON.stringify(colors))
-    } function removeFromArrayAtIndex(array, index) { array.splice(index, 1); } function saveColorHtml(name, hexColor) {
-        const parentPickedColor = document.createElement("div")
-        const pickedColorBox = document.createElement("input")
-        const pickedColorName = document.createElement("input")
-        const pickedColorRemoveBtn = document.createElement("button")
-        parentPickedColor.className = "picked-color"
-        pickedColorBox.className = "picked-color-box"
-        pickedColorRemoveBtn.innerHTML = "Remove"
-        pickedColorBox.type = "color"
-        pickedColorBox.oninput = (event) => { pickedColorBox.style.backgroundColor = event.srcElement.value }pickedColorBox.onchange = (event) => { for (var a = 1; a < parentList.childNodes.length; a++) { if (event.srcElement.parentNode == parentList.childNodes[a]) { saveColorStorage(name, event.srcElement.value, a - 1) } } }pickedColorName.oninput = (event) => { for (var a = 1; a < parentList.childNodes.length; a++) { if (event.srcElement.parentNode == parentList.childNodes[a]) { saveColorStorage(event.srcElement.value, hexColor, a - 1) } } }pickedColorRemoveBtn.onclick = (event) => {
-            for (var a = 1; a < parentList.childNodes.length; a++) {
-                if (event.srcElement.parentNode == parentList.childNodes[a]) {
-                    const colors = getColors()
-                    removeFromArrayAtIndex(colors, a - 1)
-                    localStorage.setItem("colors", JSON.stringify(colors))
-                    event.srcElement.parentNode.remove()
-                }
-            }
-        }pickedColorName.className = "picked-color-name"
-        pickedColorBox.value = hexColor
-        pickedColorBox.style.backgroundColor = hexColor
-        pickedColorName.value = name
-        parentPickedColor.appendChild(pickedColorBox)
-        parentPickedColor.appendChild(pickedColorName)
-        parentPickedColor.appendChild(pickedColorRemoveBtn)
-        parentList.appendChild(parentPickedColor)
-    } function loadColors() {
-        getColors().forEach((color) => {
-            saveColorHtml(color["name"], color["color"])
-        })
-    }</script>
+        const colorName = document.querySelector(".color-name").value;
+        const hexColor = document.querySelector(".color-box").value;
+        saveColorStorage(colorName, hexColor);
+        saveColorHtml(colorName, hexColor);
+    }
+
+    function getColors() {
+        const colors = JSON.parse(localStorage.getItem("colors") || "[]");
+        return colors;
+    }
+
+    function saveColorStorage(name, hexColor, index = null) {
+        const colors = getColors();
+        const color = { name, color: hexColor };
+
+        if (index !== null) {
+            colors[index] = color;
+        } else {
+            colors.push(color);
+        }
+
+        localStorage.setItem("colors", JSON.stringify(colors));
+    }
+
+    function removeFromArrayAtIndex(array, index) {
+        array.splice(index, 1);
+    }
+
+    function saveColorHtml(name, hexColor) {
+        const parentPickedColor = document.createElement("div");
+        parentPickedColor.className = "picked-color";
+
+        const pickedColorBox = document.createElement("input");
+        pickedColorBox.type = "color";
+        pickedColorBox.className = "picked-color-box";
+        pickedColorBox.value = hexColor;
+        pickedColorBox.style.backgroundColor = hexColor;
+
+        const pickedColorName = document.createElement("input");
+        pickedColorName.className = "picked-color-name";
+        pickedColorName.value = name;
+
+        const pickedColorRemoveBtn = document.createElement("button");
+        pickedColorRemoveBtn.innerHTML = "Remove";
+
+        pickedColorBox.oninput = (event) => {
+            pickedColorBox.style.backgroundColor = event.target.value;
+        };
+
+        pickedColorBox.onchange = (event) => {
+            const index = Array.from(parentList.children).indexOf(parentPickedColor);
+            saveColorStorage(name, event.target.value, index);
+        };
+
+        pickedColorName.oninput = (event) => {
+            const index = Array.from(parentList.children).indexOf(parentPickedColor);
+            saveColorStorage(event.target.value, hexColor, index);
+        };
+
+        pickedColorRemoveBtn.onclick = () => {
+            const index = Array.from(parentList.children).indexOf(parentPickedColor);
+            const colors = getColors();
+            removeFromArrayAtIndex(colors, index);
+            localStorage.setItem("colors", JSON.stringify(colors));
+            parentPickedColor.remove();
+        };
+
+        parentPickedColor.appendChild(pickedColorBox);
+        parentPickedColor.appendChild(pickedColorName);
+        parentPickedColor.appendChild(pickedColorRemoveBtn);
+        parentList.appendChild(parentPickedColor);
+    }
+
+    function loadColors() {
+        const colors = getColors();
+        colors.forEach(color => saveColorHtml(color.name, color.color));
+    }
+
+    loadColors();
+</script>
