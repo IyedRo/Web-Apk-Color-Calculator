@@ -7,7 +7,7 @@ body {
 
 .header {
     background-color: #279036;
-    padding: 0.75rem 1.25rem;
+    padding: 0.34rem 1.25rem;
     display: flex;
     align-items: center;
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
@@ -50,6 +50,24 @@ body {
 
 .header .menu a:active {
     transform: translateY(0);
+}
+
+.header #imgh2 {
+    background-color: #cedded;
+    border-radius: 8px;
+    margin-left: 12px;
+    height: 50px;
+    width: auto;
+    transition: 0.12s;
+    cursor: pointer;
+}
+
+.header #imgh2:hover {
+    transform: scale(1.1);
+}
+
+.header #imgh2:active {
+    transform: scale(1);
 }
 
 hr {
