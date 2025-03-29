@@ -57,24 +57,3 @@ hr {
     border: 1px solid #CECECE;
     margin: 20px 0;
 }
-
-@media screen and (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        padding: 0.75rem;
-    }
-
-    .header .menu {
-        margin-left: 0;
-        margin-top: 0.75rem;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-
-    .header .menu a {
-        margin: 0.25rem;
-        padding: 0.5rem 0.75rem;
-        font-size: 0.9rem;
-    }
-}
